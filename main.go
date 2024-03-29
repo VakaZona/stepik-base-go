@@ -1,10 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	var i int
-	fmt.Scan(&i)
-	c := i % 10
-	fmt.Println(c)
+	var d int
+	fmt.Scan(&d)
+	hour := d / 30
+	minute := d % 30
+
+	println("It is", hour, "hours", minute, "minutes")
 }
