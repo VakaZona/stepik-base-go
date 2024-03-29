@@ -8,7 +8,7 @@ func main() {
 	var d int
 	fmt.Scan(&d)
 	hour := d / 30
-	minute := d % 30
+	minute := (d % 30) * 2
 
-	println("It is", hour, "hours", minute, "minutes.")
+	fmt.Println("It is", hour, "hours", minute, "minutes.")
 }
