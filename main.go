@@ -10,5 +10,5 @@ func main() {
 	hour := d / 30
 	minute := d % 30
 
-	println("It is", hour, "hours", minute, "minutes")
+	println("It is", hour, "hours", minute, "minutes.")
 }
