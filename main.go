@@ -5,6 +5,6 @@ import "fmt"
 func main() {
 	var i int
 	fmt.Scan(&i)
-	i = i * i
-	fmt.Println(i)
+	c := i % 10
+	fmt.Println(c)
 }
