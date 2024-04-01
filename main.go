@@ -5,13 +5,15 @@ import "fmt"
 func main() {
 	var number int
 	fmt.Scan(&number)
-	number1 := number / 100
-	number2 := (number % 100) / 10
-	number3 := number % 10
-
-	if (number1 == number2) || (number1 == number3) || (number2 == number3) {
-		fmt.Println("NO")
+	if 0 != number/10000 {
+		fmt.Print(number / 10000)
+	} else if 0 != number/1000 {
+		fmt.Println(number / 1000)
+	} else if 0 != number/100 {
+		fmt.Println(number / 100)
+	} else if 0 != number/10 {
+		fmt.Println(number / 10)
 	} else {
-		fmt.Println("YES")
+		fmt.Println(number)
 	}
 }
