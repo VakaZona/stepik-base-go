@@ -3,14 +3,15 @@ package main
 import "fmt"
 
 func main() {
-	var x, p, y int
-	var year int = 0
-	fmt.Scan(&x)
-	fmt.Scan(&p)
-	fmt.Scan(&y)
-	for x < y {
-		x = x + (x*p)/100
-		year++
+	var number float64
+	fmt.Scan(&number)
+
+	if number <= 0.0 {
+		fmt.Printf("число %4.2f не подходит", number)
+	} else if number > 10000 {
+		fmt.Printf("%e", number)
+	} else {
+		number = number * number
+		fmt.Printf("%.4f", number)
 	}
-	fmt.Println(year)
 }
