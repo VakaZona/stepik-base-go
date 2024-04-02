@@ -1,16 +1,19 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	var n, c, d int
-	fmt.Scan(&n)
-	fmt.Scan(&c)
-	fmt.Scan(&d)
-	for i := 1; i <= n; i++ {
-		if (i%c == 0) && (i%d != 0) {
-			fmt.Println(i)
+	var number int
+	for {
+		fmt.Scan(&number)
+		if number > 100 {
 			break
+		} else if number < 10 {
+			continue
+		} else {
+			fmt.Println(number)
 		}
 	}
 }
