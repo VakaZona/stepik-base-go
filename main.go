@@ -3,15 +3,20 @@ package main
 import "fmt"
 
 func main() {
-	var number float64
-	fmt.Scan(&number)
+	var workArray [10]uint8
 
-	if number <= 0.0 {
-		fmt.Printf("число %4.2f не подходит", number)
-	} else if number > 10000 {
-		fmt.Printf("%e", number)
-	} else {
-		number = number * number
-		fmt.Printf("%.4f", number)
+	for i := 0; i < 10; i++ {
+		fmt.Scan(&workArray[i])
+	}
+
+	var index1, index2, index3, index4, index5, index6 int
+	fmt.Scan(&index1, &index2, &index3, &index4, &index5, &index6)
+
+	workArray[index1], workArray[index2] = workArray[index2], workArray[index1]
+	workArray[index3], workArray[index4] = workArray[index4], workArray[index3]
+	workArray[index5], workArray[index6] = workArray[index6], workArray[index5]
+
+	for i := 0; i < 10; i++ {
+		fmt.Print(workArray[i], " ")
 	}
 }
